@@ -11,7 +11,7 @@
     "build": "run-p build:css build:images build:js",
     "build:css": "run-p build:css:postcss build:css:styleguide",
     "build:css:postcss": "postcss -c postcss.config.json",
-    "build:css:styleguide": "kss --source 'src/css' --destination 'dist/' --custom dark --builder 'src/styleguide' --homepage 'styleguide.md' --title 'Style Guide Generator' --nav-depth 2",
+    "build:css:styleguide": "kss --source 'src/css' --destination 'dist/' --custom dark --builder 'src/styleguide' --homepage 'styleguide.md' --title 'Style Guide Boilerplate' --nav-depth 2",
     "build:images": "imagemin src/assets/img dist/assets/img -p",
     "build:js": "webpack -p",
     "build:js:minified": "NODE_ENV=production npm run build:js",
