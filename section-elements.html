@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Style Guide Generator</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Generate favicons from http://realfavicongenerator.net/ -->
+  </head>
+  <body class="sg-page">
+
+    <div class="sg-overlay js-sg-overlay"></div>
+
+    <!-- HEADER -->
+    <div class="sg-page__header">
+      <header class="sg-header">
+        <button class="sg-hamburger js-sg-slideout-toggle">
+          <div class="sg-hamburger__icon">
+            <span class="sg-hamburger__line"></span>
+            <span class="sg-hamburger__line"></span>
+            <span class="sg-hamburger__line"></span>
+          </div>
+        </button>
+        <a href="/" class="sg-header__title">
+          <span>Style Guide</span>
+        </a>
+      </header>
+    </div>
+
+    <div class="sg-page__main">
+
+      <!-- SIDEBAR -->
+      <div class="sg-slideout-menu js-sg-slideout-menu">
+        <aside class="sg-sidebar">
+          <ul class="sg-sidebar__menu">
+            <li>
+              <a href="./">Getting Started</a>
+            </li>
+              <li>
+                <a data-target="#settings" href="section-settings.html#settings">Settings</a>
+                  <ul>
+                      <li>
+                        <a data-target="#settings-colors" href="section-settings.html#settings-colors">Colors</a>
+                      </li>
+                      <li>
+                        <a data-target="#settings-mixins" href="section-settings.html#settings-mixins">Mixins</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a data-target="#elements" href="section-elements.html#elements">Elements</a>
+                  <ul>
+                      <li>
+                        <a data-target="#elements-buttons" href="section-elements.html#elements-buttons">Buttons</a>
+                      </li>
+                      <li>
+                        <a data-target="#elements-lists" href="section-elements.html#elements-lists">Lists</a>
+                      </li>
+                      <li>
+                        <a data-target="#elements-typography" href="section-elements.html#elements-typography">Typography</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a data-target="#components" href="section-components.html#components">Components</a>
+                  <ul>
+                      <li>
+                        <a data-target="#components-buttons" href="section-components.html#components-buttons">Buttons</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a data-target="#layout" href="section-layout.html#layout">Layout</a>
+                  <ul>
+                      <li>
+                        <a data-target="#layout-section" href="section-layout.html#layout-section">Section</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a data-target="#helpers" href="section-helpers.html#helpers">Helpers</a>
+                  <ul>
+                      <li>
+                        <a data-target="#helpers-typography" href="section-helpers.html#helpers-typography">Typography</a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- MAIN -->
+      <main class="sg-main">
+
+          <!-- STYLE GUIDE SECTION -->
+            <div id="elements"></div>
+            <section class="sg-section sg-section--depth-1 ">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h1 class="sg-section__h1">
+                    Elements                  </h1>
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+
+              </div>
+            </section>
+            <div id="elements-buttons"></div>
+            <section class="sg-section sg-section--depth-2 ">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h2 class="sg-section__h2">
+                    
+                      <a data-target="#elements-buttons" href="#elements-buttons">
+                        Buttons
+                      </a>
+                  </h2>
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+                  <div class="sg-section__markup-label">
+                    <span class="sg-c-label">Example</span>
+                  </div>
+                  <div class="sg-section__markup">
+                    <button>Button</button>
+                  </div>
+                  <pre class="sg-section__code lang-html"><code>&lt;button&gt;Button&lt;/button&gt;</code></pre>
+
+              </div>
+            </section>
+            <div id="elements-lists"></div>
+            <section class="sg-section sg-section--depth-2 ">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h2 class="sg-section__h2">
+                    
+                      <a data-target="#elements-lists" href="#elements-lists">
+                        Lists
+                      </a>
+                  </h2>
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+                  <div class="sg-section__markup-label">
+                    <span class="sg-c-label">Example</span>
+                  </div>
+                  <div class="sg-section__markup">
+                    <h3>Ordered List</h3>
+<ol>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ol>
+<h3>Unordered List</h3>
+<ul>
+  <li>List Item 1</li>
+  <li>List Item 2
+    <ul>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ul>
+  </li>
+  <li>List Item 3</li>
+</ul>
+                  </div>
+                  <pre class="sg-section__code lang-html"><code>&lt;h3&gt;Ordered List&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;List Item 1&lt;/li&gt;
+  &lt;li&gt;List Item 2&lt;/li&gt;
+  &lt;li&gt;List Item 3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;List Item 1&lt;/li&gt;
+  &lt;li&gt;List Item 2
+    &lt;ul&gt;
+      &lt;li&gt;List Item 1&lt;/li&gt;
+      &lt;li&gt;List Item 2&lt;/li&gt;
+      &lt;li&gt;List Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;List Item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+              </div>
+            </section>
+            <div id="elements-lists-definition-lists"></div>
+            <section class="sg-section sg-section--depth-3 ">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h3 class="sg-section__h3">
+                    
+                      <a data-target="#elements-lists-definition-lists" href="#elements-lists-definition-lists">
+                        Definition Lists
+                      </a>
+                  </h3>
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+                  <div class="sg-section__markup-label">
+                    <span class="sg-c-label">Example</span>
+                  </div>
+                  <div class="sg-section__markup">
+                    <dl>
+  <dt>Definition List Title</dt>
+  <dd>This is a definition list division.</dd>
+  <dt>Definition List Title</dt>
+  <dd>This is a definition list division.</dd>
+  <dt>Definition List Title</dt>
+  <dd>This is a definition list division.</dd>
+</dl>
+                  </div>
+                  <pre class="sg-section__code lang-html"><code>&lt;dl&gt;
+  &lt;dt&gt;Definition List Title&lt;/dt&gt;
+  &lt;dd&gt;This is a definition list division.&lt;/dd&gt;
+  &lt;dt&gt;Definition List Title&lt;/dt&gt;
+  &lt;dd&gt;This is a definition list division.&lt;/dd&gt;
+  &lt;dt&gt;Definition List Title&lt;/dt&gt;
+  &lt;dd&gt;This is a definition list division.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+              </div>
+            </section>
+            <div id="elements-typography"></div>
+            <section class="sg-section sg-section--depth-2 ">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h2 class="sg-section__h2">
+                    
+                      <a data-target="#elements-typography" href="#elements-typography">
+                        Typography
+                      </a>
+                  </h2>
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+
+              </div>
+            </section>
+            <div id="elements-typography-headings"></div>
+            <section class="sg-section sg-section--depth-3 ">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h3 class="sg-section__h3">
+                    
+                      <a data-target="#elements-typography-headings" href="#elements-typography-headings">
+                        Headings
+                      </a>
+                  </h3>
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+                  <div class="sg-section__markup-label">
+                    <span class="sg-c-label">Example</span>
+                  </div>
+                  <div class="sg-section__markup">
+                    <h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+                  </div>
+                  <pre class="sg-section__code lang-html"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+
+              </div>
+            </section>
+            <div id="elements-typography-links"></div>
+            <section class="sg-section sg-section--depth-3 ">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h3 class="sg-section__h3">
+                    
+                      <a data-target="#elements-typography-links" href="#elements-typography-links">
+                        Links
+                      </a>
+                  </h3>
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+                  <div class="sg-section__markup-label">
+                    <span class="sg-c-label">Example</span>
+                  </div>
+                  <div class="sg-section__markup">
+                    <a>Link</a>
+                  </div>
+                  <pre class="sg-section__code lang-html"><code>&lt;a&gt;Link&lt;/a&gt;</code></pre>
+
+              </div>
+            </section>
+            <div id="elements-typography-paragraphs"></div>
+            <section class="sg-section sg-section--depth-3 ">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h3 class="sg-section__h3">
+                    
+                      <a data-target="#elements-typography-paragraphs" href="#elements-typography-paragraphs">
+                        Paragraphs
+                      </a>
+                  </h3>
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+                  <div class="sg-section__markup-label">
+                    <span class="sg-c-label">Example</span>
+                  </div>
+                  <div class="sg-section__markup">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  <pre class="sg-section__code lang-html"><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</code></pre>
+
+              </div>
+            </section>
+      </main>
+
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/styleguide.js"></script>
+
+  </body>
+</html>

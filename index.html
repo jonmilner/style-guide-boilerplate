@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Style Guide Generator</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Generate favicons from http://realfavicongenerator.net/ -->
+  </head>
+  <body class="sg-page">
+
+    <div class="sg-overlay js-sg-overlay"></div>
+
+    <!-- HEADER -->
+    <div class="sg-page__header">
+      <header class="sg-header">
+        <button class="sg-hamburger js-sg-slideout-toggle">
+          <div class="sg-hamburger__icon">
+            <span class="sg-hamburger__line"></span>
+            <span class="sg-hamburger__line"></span>
+            <span class="sg-hamburger__line"></span>
+          </div>
+        </button>
+        <a href="/" class="sg-header__title">
+          <span>Style Guide</span>
+        </a>
+      </header>
+    </div>
+
+    <div class="sg-page__main">
+
+      <!-- SIDEBAR -->
+      <div class="sg-slideout-menu js-sg-slideout-menu">
+        <aside class="sg-sidebar">
+          <ul class="sg-sidebar__menu">
+            <li>
+              <a href="./">Getting Started</a>
+            </li>
+              <li>
+                <a data-target="#settings" href="section-settings.html#settings">Settings</a>
+                  <ul>
+                      <li>
+                        <a data-target="#settings-colors" href="section-settings.html#settings-colors">Colors</a>
+                      </li>
+                      <li>
+                        <a data-target="#settings-mixins" href="section-settings.html#settings-mixins">Mixins</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a data-target="#elements" href="section-elements.html#elements">Elements</a>
+                  <ul>
+                      <li>
+                        <a data-target="#elements-buttons" href="section-elements.html#elements-buttons">Buttons</a>
+                      </li>
+                      <li>
+                        <a data-target="#elements-lists" href="section-elements.html#elements-lists">Lists</a>
+                      </li>
+                      <li>
+                        <a data-target="#elements-typography" href="section-elements.html#elements-typography">Typography</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a data-target="#components" href="section-components.html#components">Components</a>
+                  <ul>
+                      <li>
+                        <a data-target="#components-buttons" href="section-components.html#components-buttons">Buttons</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a data-target="#layout" href="section-layout.html#layout">Layout</a>
+                  <ul>
+                      <li>
+                        <a data-target="#layout-section" href="section-layout.html#layout-section">Section</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a data-target="#helpers" href="section-helpers.html#helpers">Helpers</a>
+                  <ul>
+                      <li>
+                        <a data-target="#helpers-typography" href="section-helpers.html#helpers-typography">Typography</a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- MAIN -->
+      <main class="sg-main">
+          <section class="sg-section sg-section--depth-1">
+  <div class="sg-container">
+    <div class="sg-section__header">
+      <h1 class="sg-section__h1">Getting Started</h1>
+    </div>
+  </div>
+</section>
+
+      </main>
+
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/styleguide.js"></script>
+
+  </body>
+</html>
