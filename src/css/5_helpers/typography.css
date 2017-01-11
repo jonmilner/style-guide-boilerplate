@@ -1,0 +1,37 @@
+/* ==========================================================================
+ * Typography
+ * ========================================================================== */
+
+/*
+  Typography
+
+  Styleguide: Helpers.Typography
+*/
+
+/*
+  Text Alignment
+
+  Markup:
+  <p class="h-text-align-left">Lorem ipsum dolor sit amet.</p>
+  <p class="h-text-align-center">Lorem ipsum dolor sit amet.</p>
+  <p class="h-text-align-right">Lorem ipsum dolor sit amet.</p>
+
+  Styleguide: Helpers.Typography.Text Alignment
+*/
+
+.h-text-align-left { text-align: left !important; }
+.h-text-align-center { text-align: center !important; }
+.h-text-align-right { text-align: right !important; }
+
+/*
+  Text Ellipsis
+
+  Markup:
+  <p class="h-text-overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  Styleguide: Helpers.Typography.Text Ellipsis
+*/
+
+.h-text-overflow-ellipsis {
+  @apply --m-text-overflow-ellipsis;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{options.title}}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Generate favicons from http://realfavicongenerator.net/ -->
+  </head>
+  <body class="sg-page">
+
+    <div class="sg-overlay js-sg-overlay"></div>
+
+    <!-- HEADER -->
+    <div class="sg-page__header">
+      <header class="sg-header">
+        <button class="sg-hamburger js-sg-slideout-toggle">
+          <div class="sg-hamburger__icon">
+            <span class="sg-hamburger__line"></span>
+            <span class="sg-hamburger__line"></span>
+            <span class="sg-hamburger__line"></span>
+          </div>
+        </button>
+        <a href="/" class="sg-header__title">
+          <span>Style Guide</span>
+        </a>
+      </header>
+    </div>
+
+    <div class="sg-page__main">
+
+      <!-- SIDEBAR -->
+      <div class="sg-slideout-menu js-sg-slideout-menu">
+        <aside class="sg-sidebar">
+          <ul class="sg-sidebar__menu">
+            <li>
+              <a href="./">Getting Started</a>
+            </li>
+            {{#each menu}}
+              <li>
+                <a data-target="#{{referenceURI}}" href="section-{{referenceURI}}.html#{{referenceURI}}">{{header}}</a>
+                {{#if children}}
+                  <ul>
+                    {{#each children}}
+                      <li>
+                        <a data-target="#{{referenceURI}}" href="section-{{../referenceURI}}.html#{{referenceURI}}">{{header}}</a>
+                      </li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        </aside>
+      </div>
+
+      <!-- MAIN -->
+      <main class="sg-main">
+        {{#if homepage}}
+          {{{homepage}}}
+        {{else}}
+
+          {{!
+            Display each section, in order.
+            The "root" element comes first in this loop, and can be detected using
+            the "#if @first" block as seen below.
+          }}
+          <!-- STYLE GUIDE SECTION -->
+          {{#each sections}}
+            <div id="{{referenceURI}}"></div>
+            <section class="sg-section sg-section--depth-{{depth}} {{#if dark}}is-dark{{/if}}">
+              <div class="sg-container">
+
+                <!-- SECTION HEADER & DESCRIPTION -->
+                <div class="sg-section__header">
+                  <h{{depth}} class="sg-section__h{{depth}}">
+                    {{#if @first}}{{header}}{{else}}
+                      <a data-target="#{{referenceURI}}" href="#{{referenceURI}}">
+                        {{header}}
+                      </a>
+                    {{/if}}
+                  </h{{depth}}>
+                  {{#if description}}
+                    <div class="sg-section__description">
+                      {{{description}}}
+                    </div>
+                  {{/if}}
+                </div>
+
+                <!-- MARKUP EXAMPLE & CODE -->
+                {{#if markup}}
+                  <div class="sg-section__markup-label">
+                    <span class="sg-c-label">Example</span>
+                  </div>
+                  <div class="sg-section__markup">
+                    {{{markup}}}
+                  </div>
+                  {{#each modifiers}}
+                    <div class="sg-section__markup-label">
+                      <span class="sg-c-label">Example ({{{description}}})</span>
+                      <code>{{name}}</code>
+                    </div>
+                    <div class="sg-section__markup">
+                      {{{markup}}}
+                    </div>
+                  {{/each}}
+                  <pre class="sg-section__code lang-html"><code>{{markup}}</code></pre>
+                {{/if}}
+
+              </div>
+            </section>
+          {{/each}}
+        {{/if}}
+      </main>
+
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/styleguide.js"></script>
+
+  </body>
+</html>

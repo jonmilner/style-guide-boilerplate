@@ -1,0 +1,58 @@
+/* ==========================================================================
+ * Slideout Menu
+ * ========================================================================== */
+
+.sg-overlay {
+  @media screen and (max-width: 979px) {
+    background: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    content: "";
+    cursor: pointer;
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 99;
+  }
+
+  &.is-visible {
+    @media screen and (max-width: 979px) {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.sg-slideout-menu {
+  background: var(--background-color-default);
+  flex-shrink: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 180px;
+  z-index: 100;
+
+  @media screen and (max-width: 979px) {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: box-shadow 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+  }
+
+  @media screen and (min-width: 980px) {
+    border-right: var(--border-default);
+  }
+
+  &.is-visible {
+    @media screen and (max-width: 979px) {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      transform: translateX(0);
+    }
+  }
+}

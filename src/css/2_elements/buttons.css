@@ -1,0 +1,25 @@
+/* ==========================================================================
+ * Buttons
+ * ========================================================================== */
+
+/*
+  Buttons
+
+  Markup:
+  <button>Button</button>
+
+  Styleguide: Elements.Buttons
+*/
+
+button {
+  color: var(--theme-color-text);
+  cursor: pointer;
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+  -webkit-font-smoothing: inherit;
+  line-height: var(--line-height-default);
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+}

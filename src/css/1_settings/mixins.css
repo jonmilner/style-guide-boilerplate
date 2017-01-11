@@ -1,0 +1,32 @@
+/* ==========================================================================
+ * Mixins
+ * ========================================================================== */
+
+/*
+  Mixins
+
+  Mixins can be used via `@apply`. For example,
+  ```css
+  .c-label {
+    @apply --m-text-overflow-ellipsis;
+  }
+  ```
+
+  Styleguide Settings.Mixins
+*/
+
+/*
+  Text Ellipsis
+
+  `--m-text-overflow-ellipsis`
+
+  Styleguide: Settings.Mixins.Text Ellipsis
+*/
+
+:root {
+  --m-text-overflow-ellipsis: {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+}

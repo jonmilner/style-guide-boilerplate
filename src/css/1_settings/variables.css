@@ -1,0 +1,128 @@
+/* ==========================================================================
+ * Variables
+ * ========================================================================== */
+
+:root {
+  --background-color-default: #fff;
+  --background-color-dark: var(--color-charcoal);
+  --border-color-default: var(--color-gray-light);
+  --border-default: 1px solid var(--border-color-default);
+  --border-radius-default: 0.2em;
+  --box-shadow-default: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --color-blue: #3498db;
+  --color-charcoal: #111;
+  --color-gray: #999;
+  --color-gray-light: #ddd;
+  --font-family-default: "Open Sans", "Arial", sans-serif;
+  --font-family-secondary: "Bitter", "Arial", sans-serif;
+  --font-size-default: var(--font-size-med);
+  --font-size-xxl: 30px;
+  --font-size-xl: 22px;
+  --font-size-lg: 16px;
+  --font-size-med: 14px;
+  --font-size-sm: 12px;
+  --font-size-xs: 10px;
+  --font-weight-default: var(--font-weight-normal);
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  --font-weight-light: 100;
+  --letter-spacing-wide: 0.1em;
+  --line-height-default: 1.5;
+  --line-height-sm: 1.2;
+  --spacing-xl: 48px;
+  --spacing-lg: 36px;
+  --spacing-med: 24px;
+  --spacing-sm: 12px;
+  --spacing-xs: 6px;
+  --text-shadow-default: 0 0 5px rgba(0, 0, 0, 0.5);
+  --theme-color-accent: var(--color-blue);
+  --theme-color-border: var(--color-gray);
+  --theme-color-input: var(--color-gray);
+  --theme-color-text: var(--color-charcoal);
+  --theme-color-text-muted: var(--color-gray);
+  --transition-duration-default: 0.2s;
+  --transition-timing-default: ease-in-out;
+  --transition-default: all var(--transition-duration-default) var(--transition-timing-default);
+
+  /* Headings */
+
+  --heading: {
+    font-family: var(--font-family-secondary);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-sm);
+
+    &:not(:last-child) {
+      margin-bottom: var(--spacing-sm);
+    }
+  }
+
+  --heading-h1: {
+    @apply --heading;
+    font-size: var(--font-size-xxl);
+  }
+
+  --heading-h2: {
+    @apply --heading;
+    font-size: var(--font-size-xl);
+  }
+
+  --heading-h3: {
+    @apply --heading;
+    font-size: var(--font-size-lg);
+  }
+
+  --heading-h4: {
+    @apply --heading;
+    font-size: var(--font-size-med);
+  }
+
+  --heading-h5: {
+    @apply --heading;
+    font-size: var(--font-size-sm);
+  }
+
+  --heading-h6: {
+    @apply --heading;
+    font-size: var(--font-size-xs);
+  }
+}
+
+/*
+  Colors
+
+  <div class="sg-color-blocks">
+    <div class="sg-color-block sg-color-block--blue"><code>--color-blue</code></div>
+    <div class="sg-color-block sg-color-block--gray"><code>--color-gray</code></div>
+    <div class="sg-color-block sg-color-block--gray-light"><code>--color-gray-light</code></div>
+    <div class="sg-color-block sg-color-block--charcoal"><code>--color-charcoal</code></div>
+  </div>
+
+  Styleguide Settings.Colors
+*/
+
+/* These styles are used by the style guide example */
+.sg-color-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  &::after {
+    border-radius: var(--border-radius-default);
+    content: "";
+    display: block;
+    height: var(--spacing-lg);
+    width: 50%;
+  }
+}
+
+@each $color in ( blue, gray, gray-light, charcoal ) {
+  .sg-color-block--$(color) {
+    &::after {
+      background: var(--color-$(color));
+    }
+  }
+}

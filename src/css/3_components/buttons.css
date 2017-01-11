@@ -1,0 +1,18 @@
+/* ==========================================================================
+ * Buttons
+ * ========================================================================== */
+
+/*
+  Buttons
+
+  Markup:
+  <button class="c-button">Button</button>
+
+  Styleguide: Components.Buttons
+*/
+
+.c-button {
+  border: var(--border-default);
+  border-radius: var(--border-radius-default);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}

@@ -1,0 +1,46 @@
+{
+  "use": [
+    "postcss-import",
+    "postcss-apply",
+    "postcss-mixins",
+    "postcss-nested",
+    "postcss-assets",
+    "cq-prolyfill/postcss-plugin",
+    "precss",
+    "postcss-cssnext",
+    "postcss-inline-svg",
+    "postcss-initial",
+    "postcss-reporter"
+  ],
+  "input": "src/css/*.css",
+  "dir": "dist/css",
+  "map": true,
+  "local-plugins": true,
+  "postcss-assets": {
+    "basePath": "src/",
+    "cachebuster": true,
+    "loadPaths": ["img/"],
+    "relative": true
+  },
+  "postcss-cssnext": {
+    "browsers": ["> 1% in US", "last 3 versions", "Firefox ESR", "Opera 12.1"]
+  },
+  "cssnano": {
+    "autoprefixer": false,
+    "calc": false,
+    "colormin": false,
+    "core": true,
+    "discardComments": {
+      "removeAll": true
+    },
+    "discardUnused": false,
+    "filterPlugins": false,
+    "normalizeUrl": false,
+    "reduceIdents": false,
+    "styleCache": true,
+    "zindex": false
+  },
+  "postcss-reporter": {
+    "clearMessages": true
+  }
+}
