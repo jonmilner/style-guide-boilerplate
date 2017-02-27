@@ -58,7 +58,8 @@
     "postcss-nested": "^1.0.0",
     "postcss-reporter": "^2.0.0",
     "precss": "^1.4.0",
-    "stylelint": "^7.5.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-jon-milner": "^1.2.3",
     "webpack": "^1.13.1"
   },
   "dependencies": {

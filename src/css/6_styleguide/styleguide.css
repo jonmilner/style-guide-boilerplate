@@ -158,10 +158,6 @@
   &--depth-1 {
     background-color: var(--theme-color-accent);
     color: #fff;
-
-    a {
-      color: #fff;
-    }
   }
 
   &__header {
@@ -237,8 +233,8 @@
 }
 
 .sg-c-label {
-  letter-spacing: var(--letter-spacing-wide);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
 }
